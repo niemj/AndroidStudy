@@ -5,13 +5,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <!--全屏悬浮窗 需要申请此权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/android_study"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}" />
@@ -104,6 +107,29 @@
 
         <service
             android:name=".multiThread.intentService.MyIntentService"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".NestedScroll.NestedScrollingActivity"
+            android:label="@string/title_activity_nested_scrolling"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".NestedScroll.tradition.ScrollListViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NestedScroll.NavigationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NestedScroll.tradition.ScrollViewPagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NestedScroll.nested.CoordinatorLayoutToolbarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NestedScroll.nested.NestedScrollActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".popup.WindowManagerActivity"
             android:screenOrientation="portrait" />
     </application>
 
